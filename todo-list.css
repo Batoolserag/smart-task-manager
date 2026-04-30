@@ -52,7 +52,6 @@ button {
   cursor: pointer;
   transition-duration: 0.5s;
   box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
-
 }
 
 button:hover {
@@ -75,19 +74,58 @@ input[type='datetime-local'] {
 .todo-list-display {
   background-color: #113F64;
   display: flex;
+  font-size: 15px;
   flex-direction: column;
-  margin: 0px 80px;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
-.todo-list-display p {
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  accent-color: #113F64;
+  cursor: pointer;
+}
+
+
+.task-card {
+  display: grid;
+  grid-template-columns: 60px 220px 200px 30px 5px 20px;
+  align-items: center;
   background-color: #C2DEF5;
-  padding: 25px;
   border: 2px solid #18578C;
   border-radius: 10px;
   font-family: monospace;
-  width: 70%;
   box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+  padding: 15px;
+}
 
+.task-datetime {
+  border: none;
+}
+
+.calendar-img{
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+}
+
+.dots-img{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.dots-option {
+  position: relative;
+  .hidden {
+    display: none; 
+    position: absolute;
+  }
+  .show {
+    display: block; 
+    position: absolute;
+  }
 }

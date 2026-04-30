@@ -31,13 +31,30 @@ function renderTodoList() {
     const task = taskObject.task;
     const datetime = taskObject.datetime.replace('T', ' ');
 
-    todoListHTML +=
-    `<p>${task} ${datetime} </p>`;
+    todoListHTML += `
+    <div class="task-card">
+        <img src="./image/calendar.png" class="calendar-img">
+        <p class="task-name">${task}</p>
+        <span class="task-datetime">${datetime}</span>
+        <input type="checkbox">
+
+        <div class="dots-option">
+          <div id="options-${i}" class="hidden">
+            <button>edit</button>
+            <button>delete</button>
+          </div>
+        </div>
+
+        <img src="./image/dots.png" class="dots-img" id="dots"
+        onclick=" dotsOptions(${i})"
+        >
+    </div>
+    `
   }
   document.querySelector('.todo-list-display').innerHTML = todoListHTML;
 
   todoListHTML
-};
+}; 
 
 const inputElement = document.querySelector('.text-input-js');
 
@@ -57,3 +74,11 @@ const minutes = now.getMinutes().toString().padStart(2, '0');
 
 const formattedDateTime = `${year}-${month}-${date}T${hours}:${minutes}`;
 document.querySelector('.datetime-input-js').value = formattedDateTime;
+
+/* Options when clicking on dots */
+function dotsOptions(index) {
+  document.getElementById(`options-${index}`).classList.toggle('show');
+  };
+
+
+
