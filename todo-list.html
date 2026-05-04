@@ -16,8 +16,26 @@
       add
     </button>
   </div>
+  <!-- Div for Search and Filter -->
+  <div  class="search-div" >
+    <input type="search" class="search-bar-js" id="searchBar" placeholder="Search...." onkeyup="filterItems()">
+    <select class="filterSort" id="sortOptions" onchange="applySort()">
+      <option value="az">Alphabetical (A - Z)</option>
+      <option value="za">Alphabetical (Z - A)</option>
+      <option value="newest">Date (Newest First)</option>
+      <option value="oldest">Date (Oldest First)</option>
+    </select>
+  </div>
   <!--Task Display Div-->
   <div class="todo-list-display">
+  <!--Pending Tasks Div-->
+    <div class="pending-tasks">
+      <h2>no pending tasks</h2>
+    </div>
+    <!--Completed Tasks Div-->
+    <div class="completed-tasks">
+      <h2>no completed tasks</h2>
+    </div>
   </div>
   <script src="todo-list.js"></script>
 </body>
