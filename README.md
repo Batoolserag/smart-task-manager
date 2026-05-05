@@ -35,8 +35,4 @@ A responsive task management web application built using HTML, CSS, and JavaScri
 
 🔗 https://github.com/Batoolserag/smart-task-manager
 
----
 
-## Screenshots
-
-![App Screenshot](./desktop/Project-SS.png)
