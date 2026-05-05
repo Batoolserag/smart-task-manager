@@ -39,8 +39,4 @@ A responsive task management web application built using HTML, CSS, and JavaScri
 
 ## Screenshots
 
-(Add screenshots here later if you want)
-
-Example:
-```md
-![App Screenshot](./screenshots/home.png)
+![App Screenshot](./desktop/Project-SS.png)
